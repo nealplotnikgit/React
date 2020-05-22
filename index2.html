@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets React</title>
+    <script     src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <script     src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <script     src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+</head>
+<body>
+<div id="app">React didnt render yet</div>
+<div id="paragraph">React didnt render yet</div>
+<div id="google">React didnt render yet</div>
+<div id="myList"></div>
+<div id="app2">React didnt render yet</div>
+
+
+<script type="text/babel">
+ReactDOM.render(
+    <h1>Hello World</h1>, document.getElementById("app")
+);
+
+ReactDOM.render(
+    <h1>I am a paragraph</h1>, document.getElementById("paragraph")
+);
+
+ReactDOM.render(
+    <a href="http://www.google.com">google</a>, document.getElementById("google")
+);
+var what =  <ul><li>Bite me</li><li>eat me</li></ul>
+var where =  document.getElementById("myList")
+
+
+ReactDOM.render( what, where
+);
+// need to put multiple tags in a single wrapping tag
+ReactDOM.render(
+    <div>
+    <h1>farely</h1>
+    <h2>barely</h2>
+    </div>,
+    document.getElementById("app2")
+)
+
+
+
+
+</script>
+</body>
+</html>
