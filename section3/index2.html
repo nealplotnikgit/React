@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script     src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <script     src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <script     src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <link rel="stylesheet" href="main2.css">
+    <title>class components</title>
+</head>
+<body>
+    <div id='neal'>REACT NOT READY</div>
+
+    <script type="text/babel">
+    class Shapes extends React.Component{
+        render(){
+            var myStyle= {
+                width:100,
+                height:100,
+                backgroundColor:"red",
+                borderRadius:"50%"
+            }
+            return <h1 style={myStyle}>Square, Circle,Rectangle</h1>
+        }
+    }
+
+
+    ReactDOM.render(
+    <Shapes/>, document.getElementById("neal")
+    );
+    
+    </script>
+</body>
+</html>

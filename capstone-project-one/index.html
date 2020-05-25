@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script     src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <script     src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <script     src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->   
+    <title>FriendLy</title>
+</head>
+<body>
+    <div id="app">
+        REACT HERE
+    </div>
+    
+    <script type="text/babel">
+    
+
+     var Friendly = function(){
+         return(
+             <div>
+                <Avatar/>
+                <UserName/>
+                <GetConnected/>
+             </div>
+         )
+     };
+
+     class Avatar extends React.Component {
+         render(){
+            return <img src="profile.jpg" alt="profile"></img>
+         }
+     }
+
+     class UserName extends React.Component {
+         render(){
+            return <h1>Neal Plotnik</h1>
+         }
+     }
+
+     var GetConnected = function(){
+         return(
+             <div>
+                <Like/>
+                <Share/>
+                <Add/>
+            </div>
+         )
+     }
+
+     class Like extends React.Component {
+         render(){
+            return  <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+         }
+     }
+     class Share extends React.Component {
+         render(){
+            return <i className="fa fa-share" aria-hidden="true"></i>
+         }
+     }
+     class Add extends React.Component {
+         render(){
+            return <i className="fa fa-plus" aria-hidden="true"></i>
+         }
+     }
+
+     ReactDOM.render(
+        <Friendly/>,
+        document.getElementById("app")
+        );
+       
+    </script>
+</body>
+</html>
